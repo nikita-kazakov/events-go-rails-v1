@@ -6,9 +6,24 @@
 
     <ul>
       <%@events.each do |event| %>
-        <li><%=event %></li>
-      <% end %>
-    </ul>
+        <li class="flex">
+          <div class="mr2">Name:</div>
+          <div><%= event.name%></div>
+        </li>
 
+        <li class="flex">
+          <div class="mr2">Location:</div>
+          <div><%= event.location%></div>
+        </li>
+
+        <li class="flex">
+          <div class="mr2">Price:</div>
+          <div><%= number_to_currency(event.price, precision: 0)%></div>
+        </li>
+
+        <br>
+
+      <% end %>
+    </ul
   </div>
 </section>
