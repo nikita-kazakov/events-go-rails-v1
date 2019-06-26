@@ -1,29 +1,41 @@
 
 <section>
   <div class="container w-70 ml-auto mr-auto">
+    <%=link_to "Add New Event", new_event_path %>
     <h1 class="f-2">Hi</h1>
 
-
-    <ul>
       <%@events.each do |event| %>
-        <li class="flex">
+        <div class="flex">
           <div class="mr2">Name:</div>
           <div><%= event.name%></div>
-        </li>
+        </div>
 
-        <li class="flex">
+        <div class="flex">
           <div class="mr2">Location:</div>
           <div><%= event.location%></div>
-        </li>
+        </div>
 
-        <li class="flex">
+        <div class="flex">
           <div class="mr2">Price:</div>
-          <div><%= number_to_currency(event.price, precision: 0)%></div>
-        </li>
+          <div><%= price_view(event)%></div>
+        </div>
 
+        <div class="flex">
+          <div class="mr2">Starts At:</div>
+          <div><%= event.starts_at%></div>
+        </div>
+
+        <div class="flex">
+          <div class="mr2">Description:</div>
+          <div><%= truncate(event.description, length: 50, separator: " ") %></div>
+        </div>
+
+        <br>
+        <%=link_to "Show", event_path(event) %>
+        <br>
+        <br>
         <br>
 
       <% end %>
-    </ul
   </div>
 </section>
