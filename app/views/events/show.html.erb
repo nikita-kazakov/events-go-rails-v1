@@ -1,35 +1,59 @@
-<h1>Show Page</h1>
+<div class="container">
+  <h1>Show Page</h1>
 
-  <div class="flex">
-    <div class="mr2">Name:</div>
-    <div><%= @event.name%></div>
+  <div class="row flex-column flex-md-row">
+
+    <div class="col">
+      <%= image_tag("placeholder400.png", class: "card-img-top")  %>
+    </div>
+
+    <div class="col">
+
+      <table class="table table-striped">
+        <thead>
+        <tr>
+          <th scope="col">Label</th>
+          <th scope="col">Value</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <th scope="row">Name</th>
+          <td><%=@event.name %></td>
+        </tr>
+
+        <tr>
+          <th scope="row">Description</th>
+          <td><%=@event.description %></td>
+        </tr>
+
+        <tr>
+          <th scope="row">Location</th>
+          <td><%=@event.location %></td>
+        </tr>
+
+        <tr>
+          <th scope="row">Price</th>
+          <td><%=price_view(@event) %></td>
+        </tr>
+
+        <tr>
+          <th scope="row">Start Date</th>
+          <td><%= @event.starts_at.time.to_formatted_s(:long) %></td>
+        </tr>
+
+        </tbody>
+      </table>
+
+      <div class="d-flex">
+        <%= link_to "All Movies", events_path, class:"btn btn-primary mr-2" %>
+        <%= link_to "Edit", edit_event_path(@event), class:"btn btn-primary mr-2" %>
+        <%= link_to "Delete", edit_event_path(@event), class:"btn btn-primary", method: :delete %>
+      </div>
+
+    </div>
+
   </div>
 
-  <div class="flex">
-    <div class="mr2">Location:</div>
-    <div><%= @event.location%></div>
-  </div>
 
-  <div class="flex">
-    <div class="mr2">Price:</div>
-    <div><%= price_view(@event)%></div>
-  </div>
-
-  <div class="flex">
-    <div class="mr2">Starts At:</div>
-    <div><%= @event.starts_at%></div>
-  </div>
-
-  <div class="flex">
-    <div class="mr2">Description:</div>
-    <div><%= @event.description%></div>
-  </div>
-
-  <br>
-  <%=link_to "All Events", events_path %> |
-  <%=link_to "Edit", edit_event_path %> |
-  <%=link_to "Delete", event_path, method: :delete %>
-  <br>
-  <br>
-  <br>
-
+</div>
