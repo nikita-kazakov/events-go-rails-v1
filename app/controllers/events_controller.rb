@@ -19,6 +19,7 @@ class EventsController < ApplicationController
   def update
     @event = Event.find(params[:id])
     @event.update(movie_params)
+    flash[:notice] = "Event Successfully Updated"
     redirect_to event_path
   end
 
@@ -31,7 +32,7 @@ class EventsController < ApplicationController
 
   def destroy
     @event = Event.find(params[:id])
-    @event.delete
+    @event.destroy
     redirect_to events_path
 
   end
@@ -39,7 +40,7 @@ class EventsController < ApplicationController
   private
 
   def movie_params
-    params.require(:event).permit(:name, :location, :price, :starts_at, :description)
+    params.require(:event).permit(:name, :location, :price, :starts_at, :description, :image_file_name, :capacity)
   end
 
 end
