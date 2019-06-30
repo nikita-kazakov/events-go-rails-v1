@@ -20,9 +20,10 @@
       </div>
 
       <div class="form-group">
-        <%= form.label "Start Date" %><br>
-        <%= form.date_field :starts_at, class:"form-control" %>
+        <%= form.label "Date" %><br>
+        <%= form.datetime_select :starts_at, class:"form-control" %>
       </div>
+
 
       <div class="form-group">
         <%=form.label :description %>

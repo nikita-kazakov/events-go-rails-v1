@@ -37,8 +37,13 @@
       </tr>
 
       <tr>
-        <th scope="row">Start Date</th>
-        <td><%= @event.starts_at%></td>
+        <th scope="row">Date</th>
+        <td><%= format_date(@event)%></td>
+      </tr>
+
+      <tr>
+        <th scope="row">Time</th>
+        <td><%= format_time(@event)%></td>
       </tr>
 
       <tr>

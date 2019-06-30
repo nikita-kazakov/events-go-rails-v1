@@ -10,7 +10,7 @@
         </div>
 
         <p class="mb-auto"><%=event.description %></p>
-        <small class="text-muted">In <%=event.location %> on <%=event.starts_at %></small>
+        <small class="text-muted">In <%=event.location %> on <%=format_date(event)%> at <%=format_time(event)%></small>
         <small class="text-muted"><%=event.spots_left %> spots remaining</small>
 
     </div>

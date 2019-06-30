@@ -16,4 +16,12 @@ module EventsHelper
     end
   end
 
+  def format_date(event)
+    event.starts_at.strftime("%b %d, %Y")
+  end
+
+  def format_time(event)
+    event.starts_at.strftime("%l:%M %p")
+  end
+
 end
