@@ -18,4 +18,8 @@ class Event < ApplicationRecord
     spots_left.zero?
   end
 
+  def anyone_registered
+    registrations.any?
+  end
+
 end
