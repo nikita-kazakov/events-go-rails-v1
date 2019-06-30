@@ -1,23 +1,20 @@
-
-
-<div class="container my-3">
-  <%= link_to "Add Event", new_event_path %>
-  <div class="row">
+ <div class="row">
 
     <%@events.each do |event| %>
 
     <div class="d-flex flex-column col-lg-4 mb-5">
         <%= image_tag("placeholder400.png", class: "card-img-top")  %>
-        <h1 class="h2"><%=event.name %></h1>
-        <p class="mb-auto"><%=event.description %></p>
-
-        <div class="d-flex justify-content-between py-3">
-          <%= link_to "Details", event_path(event), class:"btn btn-primary" %>
-          <span class="align-self-center">5 spots remaining</span>
+        <div class="d-flex justify-content-between">
+          <%=link_to event.name, event_path(event), class:"h2 text-decoration-none" %>
+          <h3><span class="badge badge-info"><%=price_view(event) %></span></h3>
         </div>
+
+        <p class="mb-auto"><%=event.description %></p>
+        <small class="text-muted">In <%=event.location %> on <%=event.starts_at %></small>
+        <small class="text-muted"><%=event.spots_left %> spots remaining</small>
+
     </div>
 
     <%end %>
 
   </div>
-</div>
