@@ -1,4 +1,5 @@
 Event.create!(
+    id: 1,
     name: "KataCamp",
     location: "Toronto, Canada",
     price: 30,
@@ -9,6 +10,7 @@ Event.create!(
 )
 
 Event.create!(
+    id: 2,
     name: "C# Valley Entrepreneurs",
     location: "Bay Area, CA",
     price: 23,
@@ -19,6 +21,7 @@ Event.create!(
 )
 
 Event.create!(
+    id: 3,
     name: "GO Tech Meetup",
     location: "Bay Area, CA",
     price: 0,
@@ -29,6 +32,7 @@ Event.create!(
 )
 
 Event.create!(
+    id: 4,
     name: "SQL Boston Tech",
     location: "Boston, MA",
     price: 50,
@@ -39,6 +43,7 @@ Event.create!(
 )
 
 Event.create!(
+    id: 5,
     name: "Derailed",
     location: "Colorado Springs, CO",
     price: 0,
@@ -47,5 +52,19 @@ Event.create!(
     starts_at: 3.weeks.ago,
     capacity: 9
 )
+
+Registration.create!(name: "Jack Bloom", email: "jack@bloom.com", how_heard: "Reddit", event_id: 1)
+Registration.create!(name: "Lauren Self", email: "lauren@outlook.com", how_heard: "Google", event_id: 1)
+Registration.create!(name: "Sue Mellon", email: "sure_mellon@bloom.com", how_heard: "Google", event_id: 1)
+
+Registration.create!(name: "Jake Sive", email: "jake@outlook.com", how_heard: "Reddit", event_id: 2)
+Registration.create!(name: "Sun Noon ", email: "sun@outlook.com", how_heard: "Google", event_id: 2)
+Registration.create!(name: "Edge Sooner ", email: "edge@outlook.com", how_heard: "Reddit", event_id: 2)
+
+Registration.create!(name: "Corazon Hemhill", email: "corazon@outlook.com", how_heard: "Reddit", event_id: 3)
+Registration.create!(name: "Bernie Koch ", email: "bernie@outlook.com", how_heard: "Reddit", event_id: 3)
+Registration.create!(name: "Eric Stevenson ", email: "edge@outlook.com", how_heard: "Google", event_id: 3)
+Registration.create!(name: "Jonie Stuffel ", email: "joanie@outlook.com", how_heard: "Reddit", event_id: 3)
+
 
 
