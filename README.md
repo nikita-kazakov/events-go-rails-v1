@@ -20,22 +20,22 @@ Clone Flix App Repository
 
 `git clone https://github.com/nikita-kazakov/events-go-rails-v1`
 
-Change terminal directory to _flix-rails-app_
+Change terminal directory to _flix-rails-app_  
 `cd events-go-rails-v1`
 
-Bundle install required Ruby gems but without production gems.
+Bundle install required Ruby gems but without production gems.  
 `bundle install --without production`
 
-Run Rails migration to create database tables from schema.
+Run Rails migration to create database tables from schema.  
 `rails db:migrate`
 
-Run seeds.db to populate database with sample movies and reviews.
+Run seeds.db to populate database with sample movies and reviews.  
 `rails db:seed`
 
-Run rails server
+Run rails server  
 `rails server`
 
-Open the internet browser and navigate to URL below.
+Open the internet browser and navigate to URL below.  
 `http://localhost:3000`
 
 You’ll see the index page.
