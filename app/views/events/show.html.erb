@@ -1,3 +1,5 @@
+
+
 <div class="row flex-column flex-md-row">
 
   <div class="col">
@@ -52,14 +54,24 @@
     <div class="d-flex">
 
       <%=register_for(@event) %>
-      <%= link_to "All Movies", events_path, class:"btn btn-primary mr-2" %>
       <%= link_to "Edit", edit_event_path(@event), class:"btn btn-primary mr-2" %>
-      <%= link_to "Delete", event_path, class:"btn btn-primary mr-2", method: :delete, data:{confirm:"Are you sure?"} %>
-      <%= link_to "All Registrations", event_registrations_path(@event), class:"btn btn-primary mr-2" %>
+      <%= link_to "Delete", event_path, class:"btn btn-danger mr-2", method: :delete, data:{confirm:"Are you sure?"} %>
     </div>
 
   </div>
-
 </div>
 
+<div class="container py-5">
+  <div class="row">
+    <div class="col">
+      <h1 class="mb-0 ">Attendees</h1>
+      <small><%= link_to "All Registrations", event_registrations_path(@event)%></small>
+      <ul class="list-group list-group-flush pt-3">
+      <%@registrations.each do |registration| %>
+          <li class="list-group-item"><%=registration.name %></li>
+      <% end %>
+      </ul>
+    </div>
+  </div>
+</div>
 

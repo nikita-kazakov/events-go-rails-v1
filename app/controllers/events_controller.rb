@@ -6,6 +6,7 @@ class EventsController < ApplicationController
 
   def show
     @event = Event.find(params[:id])
+    @registrations = @event.registrations.all
   end
 
   def edit
@@ -18,16 +19,27 @@ class EventsController < ApplicationController
 
   def update
     @event = Event.find(params[:id])
-    @event.update(movie_params)
-    flash[:notice] = "Event Successfully Updated"
-    redirect_to event_path
+
+    if @event.update(movie_params)
+      redirect_to event_path
+      flash[:notice] = "Event Updated!"
+    else
+      render :edit
+    end
+
   end
 
   def create
     #@event = Event.new(params[:event])
     @event = Event.new(movie_params)
-    @event.save
-    redirect_to events_path
+
+    if @event.save
+      redirect_to events_path
+      flash[:notice] = "Event Created!"
+    else
+      render :new
+    end
+
   end
 
   def destroy
