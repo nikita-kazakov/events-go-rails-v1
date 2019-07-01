@@ -65,6 +65,3 @@ Registration.create!(name: "Corazon Hemhill", email: "corazon@outlook.com", how_
 Registration.create!(name: "Bernie Koch ", email: "bernie@outlook.com", how_heard: "Reddit", event_id: 3)
 Registration.create!(name: "Eric Stevenson ", email: "edge@outlook.com", how_heard: "Google", event_id: 3)
 Registration.create!(name: "Jonie Stuffel ", email: "joanie@outlook.com", how_heard: "Reddit", event_id: 3)
-
-
-
