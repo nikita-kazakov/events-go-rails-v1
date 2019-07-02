@@ -7,7 +7,7 @@ This app is meant to show Rails CRUD flexibility without using scaffolding.
 
 # Deloyed Application
 
-(Insert Deployed Link Here)
+https://events-go-v1.herokuapp.com
 (Deployed to Heroku, please wait 10 seconds to load).
 
 
