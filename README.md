@@ -7,11 +7,11 @@ This app is meant to show Rails CRUD flexibility without using scaffolding.
 
 # Deloyed Application
 
-https://events-go-v1.herokuapp.com
+https://events-go-v1.herokuapp.com  
 (Deployed to Heroku, please wait 10 seconds to load).
 
 
-Video of Flix App  (60 seconds):
+Video of Events App  (60 seconds):  
 (Insert YouTube Video)
 
 # Getting Started
