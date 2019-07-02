@@ -35,6 +35,14 @@ group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   # Use sqlite3 as the database for Active Record
   gem 'sqlite3', '~> 1.4'
+
+  gem 'rspec-rails'
+  #gem 'rspec-rails', git: 'https://github.com/rspec/rspec-rails', branch: '4-0-dev'
+  #gem 'rspec-core', git: 'https://github.com/rspec/rspec-core'
+  #gem 'rspec-mocks', git: 'https://github.com/rspec/rspec-mocks'
+  #gem 'rspec-support', git: 'https://github.com/rspec/rspec-support'
+  #gem 'rspec-expectations', git: 'https://github.com/rspec/rspec-expectations'
+
 end
 
 group :production do
